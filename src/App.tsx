@@ -20,11 +20,11 @@ function DemoNav() {
   ];
 
   return (
-    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-full shadow-lg px-2 py-2 flex items-center gap-1 flex-wrap max-w-[95vw]">
+    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-lg px-2 py-2 flex items-center gap-1 overflow-x-auto" style={{ maxWidth: 'calc(100vw - 32px)' }}>
       {navItems.map((item) => {
         const isActive = location.pathname === item.path;
         return (
-          <Link key={item.path} to={item.path}>
+          <Link key={item.path} to={item.path} className="flex-shrink-0">
             <motion.button
               className={`px-3 py-1.5 rounded-full text-sm font-medium transition-colors whitespace-nowrap ${
                 isActive
