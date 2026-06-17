@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Play, Pause, SkipBack, SkipForward, Settings, Maximize, Volume2, X, ExternalLink, AlertCircle, Code, Lightbulb, Trophy, BookOpen } from 'lucide-react';
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { Play, Pause, SkipBack, SkipForward, Settings, Maximize, Volume2, ExternalLink, AlertCircle, Code, Lightbulb, Trophy, BookOpen } from 'lucide-react';
+import { useState, useEffect, useCallback } from 'react';
 
 interface Chapter {
   title: string;

@@ -2,16 +2,15 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   ThumbsUp, Share, Download, Bookmark, ChevronDown, Eye, FileText, List, Save,
-  ToggleLeft, ToggleRight, MessageSquare, Play, Target, CheckCircle, AlertCircle,
-  RotateCcw, Plus, Pencil, Trash2, Clock, X, HelpCircle, BookmarkPlus, FileDown
+  ToggleLeft, ToggleRight, MessageSquare, Target, CheckCircle, AlertCircle,
+  RotateCcw, Plus, Pencil, Trash2, Clock, HelpCircle, BookmarkPlus, FileDown
 } from 'lucide-react';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import FakeVideoPlayer from '../components/FakeVideoPlayer';
 import ToastContainer from '../components/Toast';
 import { useToast } from '../hooks/useToast';
-import { useNotes } from '../hooks/useNotes';
-import { distractingRecommendations, learningVideos, entertainmentVideos, continueLearningVideos, subscribedVideos } from '../data/mockData';
+import { learningVideos, entertainmentVideos, continueLearningVideos } from '../data/mockData';
 import { ViewGoal, Note, Chapter, AdMarker } from '../types';
 import VideoCard from '../components/VideoCard';
 
@@ -170,8 +169,6 @@ export default function IntegratedDemoPage() {
         <div className="flex gap-6 p-6">
           <div className="flex-1 max-w-4xl">
             <FakeVideoPlayer
-              title="Array trong lập trình"
-              subtitle="Bài 12 – Cấu trúc dữ liệu và giải thuật"
               duration={32 * 60 + 45}
               chapters={arrayChapters}
               adMarkers={arrayAdMarkers}

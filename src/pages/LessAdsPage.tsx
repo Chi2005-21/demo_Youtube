@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ThumbsUp, Share, Download, Bookmark, AlertCircle, Info, Pause, Play, ChevronDown, ExternalLink } from 'lucide-react';
+import { ThumbsUp, Share, Download, Bookmark, AlertCircle, Info, Pause, Play, ExternalLink } from 'lucide-react';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import VideoCard from '../components/VideoCard';
@@ -16,7 +16,7 @@ export default function LessAdsPage() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [selectedChapter, setSelectedChapter] = useState<number>(0);
-  const [showAdWarning, setShowAdWarning] = useState(true);
+  const [showAdWarning] = useState(true);
   const [studyMode, setStudyMode] = useState(true);
   const [adToast, setAdToast] = useState<string | null>(null);
 

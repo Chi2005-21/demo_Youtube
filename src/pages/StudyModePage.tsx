@@ -1,17 +1,11 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ThumbsUp, Share, Download, Bookmark, ChevronDown, Eye, FileText, List, Save, ToggleLeft, ToggleRight, MessageSquare, Play, Pause, ExternalLink } from 'lucide-react';
+import { ThumbsUp, Share, Download, Bookmark, ChevronDown, Eye, FileText, List, Save, ToggleLeft, ToggleRight, MessageSquare, ExternalLink } from 'lucide-react';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import VideoPlayer from '../components/VideoPlayer';
 import VideoCard from '../components/VideoCard';
-import { lessonArray, arrayChapters, distractingRecommendations, lessonNetwork } from '../data/mockData';
-
-function formatTime(seconds: number): string {
-  const mins = Math.floor(seconds / 60);
-  const secs = seconds % 60;
-  return `${mins}:${secs.toString().padStart(2, '0')}`;
-}
+import { lessonArray, arrayChapters, distractingRecommendations } from '../data/mockData';
 
 export default function StudyModePage() {
   const [studyMode, setStudyMode] = useState(true);

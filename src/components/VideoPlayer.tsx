@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Play, Pause, Volume2, SkipBack, SkipForward, Settings, Maximize, ExternalLink } from 'lucide-react';
+import { Play, Volume2, SkipBack, SkipForward, Settings, Maximize } from 'lucide-react';
 import { useState } from 'react';
 import { Video } from '../types';
 

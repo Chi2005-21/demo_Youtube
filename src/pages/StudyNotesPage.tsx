@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, Pencil, Trash2, Clock, FileText, ThumbsUp, Share, Download, Bookmark, RotateCcw, X, Check, AlertTriangle, ExternalLink, Play } from 'lucide-react';
+import { Plus, Pencil, Trash2, Clock, FileText, ThumbsUp, Share, Download, Bookmark, RotateCcw, X, Check, AlertTriangle, ExternalLink } from 'lucide-react';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import VideoPlayer from '../components/VideoPlayer';
 import ToastContainer from '../components/Toast';
 import { useToast } from '../hooks/useToast';
 import { useNotes } from '../hooks/useNotes';
-import { lessonArray, arrayChapters } from '../data/mockData';
+import { lessonArray } from '../data/mockData';
 import { Note } from '../types';
 
 function formatTime(seconds: number): string {
@@ -28,8 +28,6 @@ export default function StudyNotesPage() {
 
   const { toasts, addToast, removeToast } = useToast();
   const { notes, addNote, updateNote, deleteNote, resetToDefault } = useNotes(lessonArray.id);
-
-  const videoDuration = 32 * 60 + 45;
 
   const handleNoteClick = (note: Note) => {
     setSelectedNote(note.id);
